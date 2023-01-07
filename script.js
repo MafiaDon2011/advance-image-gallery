@@ -2,11 +2,13 @@ const imgs = document.querySelectorAll('.slider-container img')
 const back = document.getElementById('back')
 const forward = document.getElementById('forward')
 const name = document.querySelector('.name')
+const description = document.querySelector('.des')
 const content = document.querySelector('.content')
 const nextImg = document.getElementById("next-img")
 
 let activeIndex = 0
 const contentArr = ["Wanda Maximoff", "The Hulk", "Iron Man", "Black Panther"]
+const descriptionArr = ["Lorem ipsum dolor sit amet consectetur adipisicing elit.", "YEs YEs", "Oh No THe TAble", "Rip my dude"]
 
 function anime() {
     content.style.bottom = "-100%"
@@ -15,6 +17,7 @@ function anime() {
 
     setTimeout(() => {
         name.innerText = contentArr[activeIndex]
+        description.innerText = descriptionArr[activeIndex]
         content.style.bottom = "0%"
         back.style.left = '0%'
         forward.style.right = '0%'
