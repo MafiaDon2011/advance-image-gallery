@@ -6,6 +6,20 @@ const content = document.querySelector('.content')
 const nextImg = document.getElementById("next-img")
 
 let activeIndex = 0
+const contentArr = ["Wanda Maximoff", "The Hulk", "Iron Man", "Black Panther"]
+
+function anime() {
+    content.style.bottom = "-100%"
+    back.style.left = '-100%'
+    forward.style.right = '-10%'
+
+    setTimeout(() => {
+        name.innerText = contentArr[activeIndex]
+        content.style.bottom = "0%"
+        back.style.left = '0%'
+        forward.style.right = '0%'
+    }, 1000)
+}
 
 function Slide(idx) {
     imgs.forEach((img) => {
@@ -14,6 +28,7 @@ function Slide(idx) {
     });
     imgs[idx].style.opacity = "100%";
     imgs[idx].style.clipPath = "ellipse(750px 750px at 0% 0%)";
+    anime()
 }
 
 back.onclick = () => {
