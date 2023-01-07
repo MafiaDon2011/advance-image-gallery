@@ -20,7 +20,8 @@ back.onclick = () => {
         activeIndex = activeIndex - 1
         Slide(activeIndex)
     } else {
-        console.log('back else')
+        activeIndex = imgs.length - 1
+        Slide(activeIndex)
     }
 }
 
@@ -29,6 +30,7 @@ forward.onclick = () => {
         activeIndex = activeIndex + 1
         Slide(activeIndex)
     } else {
-        console.log('forward else')
+        activeIndex = 0
+        Slide(activeIndex)
     }
 }
