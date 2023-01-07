@@ -82,3 +82,7 @@ img {
 p {
     margin-top: 6px;
 }
+
+#next-img {
+    z-index: -5;
+}
